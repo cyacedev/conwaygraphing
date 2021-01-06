@@ -6,7 +6,7 @@ from scipy.interpolate import CubicSpline
 x=[]
 y=[]
 
-plt.ioff()
+plt.ioff() #deactivate interactive
 with open('randomsim.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
@@ -17,7 +17,8 @@ with open('randomsim.csv') as csvfile:
 #define spline
 spl = CubicSpline(x, y)
 arr = np.arange(np.amin(x), np.amax(x), 0.1)
-plt.plot(arr, spl(arr), marker='')
+
+plt.plot(arr, spl(arr), marker='') #plot said spline
 plt.xlabel("Iteration")
 plt.ylabel("Anzahl Zellen")
 plt.title("Verlauf von einer Conway-Simulation")
