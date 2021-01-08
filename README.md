@@ -7,3 +7,9 @@ This repository contains attempts on making an implementation to graph data gene
 ```bash
 pip install -r requirements.txt
 ```
+
+## Usage
+
+```bash
+python main.py <InputStats> <OutputGraph>
+```

@@ -2,12 +2,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 import csv
 from scipy.interpolate import CubicSpline
+import sys
 
 x=[]
 y=[]
 
 plt.ioff() #deactivate interactive
-with open('randomsim.csv') as csvfile:
+plt.figure(figsize=(15, 6))
+with open(sys.argv[1]) as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         if int(row['Iteration'])!= 0:
@@ -22,4 +24,4 @@ plt.plot(arr, spl(arr), marker='') #plot said spline
 plt.xlabel("Iteration")
 plt.ylabel("Anzahl Zellen")
 plt.title("Verlauf von einer Conway-Simulation")
-plt.show()
+plt.savefig(sys.argv[2])
