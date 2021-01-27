@@ -11,5 +11,5 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py <StatToPlot> <StatDescription> <OutputGraph> <List of Files...>
+python main.py <StatToPlot> <StatDescription> <OutputGraph> <SkipFirstIteration> <List of Files...>
 ```
