@@ -11,5 +11,12 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py <StatToPlot> <StatDescription> <OutputGraph> <SkipFirstIteration> <List of Files...>
+❯ py main.py -h
+Usage: main.py [options] <statToPlot> <output> <file/s>
+
+Options:
+  -h, --help   show this help message and exit
+  -c, --cubic  deactivate cubic spline
+  -S, --show   Show graph in matplotlib display
+  -s, --skip   Skips first iteration (extreme skews if false)
 ```
